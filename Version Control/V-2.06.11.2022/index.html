@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        overflow: hidden;
+        background: url("bg4.jpg");
+        background-size:cover;
+        
+
+    }
+
+
+/* .................................................................................................... */
+
+                 /* Toggle mode CSS */
+
+    /* .dark-mode{
+        background: url("bg3.jpg");
+        background-size: cover;
+        width: 100%;
+    }
+   
+    .change-jet{
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        background: url("alien1.gif");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 50%;
+        bottom: 0px;
+
+    } */
+
+
+/* .................................................................................................... */
+
+
+    #board {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        margin: 40px auto;
+        border: 2px solid white;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .jet{
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        background: url("a.gif");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 50%;
+        bottom: 0px;
+
+    }
+
+    
+
+    .bullets{
+        position: absolute;
+        bottom: 40px;
+        left: 0%;
+        width: 10px;
+        height: 8px;
+        background: url("bullets.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    .rocks{
+        position: absolute;
+        top: 0px;
+        width: 70px;
+        height: 70px;
+        background: url("alien6.gif");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+    #points{
+        position: absolute;
+        top: 0px;
+        margin: 40px;
+        opacity: 1;
+        font-size: 4em;
+        color: white;
+
+    }
+
+/* .................................................................................................... */
+
+                                     /* Button CSS (New Feature) */
+
+.button{
+     background-color: aqua;
+     cursor: pointer;
+     height: 30px;
+     width: 80px;
+     overflow: hidden;
+     border: 2px solid rgb(236, 236, 11);
+     color: black;
+     font-weight:bold;
+}
+.button:hover{
+    background-color: chartreuse;
+    border: 2px solid rgb(236, 11, 60);
+}
+
+/* .................................................................................................... */
+
+    .coins{
+        position: absolute;
+        top: 0px;
+        width: 25px;
+        height: 25px;
+        background: url("coin1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    #coin_text{
+        position: absolute;
+        left: 60%;
+        width: 20px;
+        height: 20px;
+        top: 0px;
+        margin: 40px;
+        opacity: 2;
+        font-size: 2em;
+        color: rgb(255, 254, 254);
+    }
+
+    #coin_count{
+        position: absolute;
+        left: 68%;
+        width: 20px;
+        height: 20px;
+        top: 0px;
+        margin: 40px;
+        opacity: 2;
+        font-size: 2em;
+        color: rgb(255, 255, 255);
+        
+    }
+
+    .stars{
+        position:absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+
+    .starimage{
+        height: 80;
+        width: 80;
+        top:100;
+        margin:5px;
+    }
+            
+</style>
+<script src="newapp.js" defer></script>
+<body >
+    <div id="board" >
+        <div class="jet" id="jet"></div>
+        <div class="coins"></div>
+        <div class="stars"></div> 
+    </div>
+    <div id="points">0</div>
+    <div id="coin_text">Coins: </div>
+    <div id="coin_count">0</div>
+    <button class="button" id="clickMe"> Start </button>
+
+    <!-- ....................................................................................................  -->
+                                 <!-- Further Implemented Feature -->
+
+    <!-- <button onclick="myFunction()">Toggle dark mode</button>
+    <button onclick="jetC()">Toggle</button> -->
+
+    <!-- ....................................................................................................  -->
+
+    <audio loop id="audio" src="backgroundsound.mp3" ></audio>
+    <audio id="bulletshoot" src="bs.mp3"></audio>
+    <audio id="cointouch" src="audio_coin_touch.mp3"></audio>
+    <audio id="failure" src="fail1.mp3"></audio>  <!--(New Feature)-->
+    <audio id="destroy" src="destroy1.wav"></audio>  <!--(New Feature)-->
+    
+</body>
+</html>
+
+
+

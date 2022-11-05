@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter</title>
+</head>
+<style>
+    @keyframes hide {
+        0% {
+            opacity: 1;
+            
+        }
+        100% {
+            opacity: 0;
+
+        }
+    }
+
+
+    body {
+        width: 100%;
+        overflow: hidden;
+        background: url("space.jpg");
+        background-size: cover;
+
+    }
+
+    #board {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 40px auto;
+        border: 2px solid white;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    #jet{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: url("rocket.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 50%;
+        bottom: 0px;
+
+    }
+
+    .bullets{
+        position: absolute;
+        bottom: 40px;
+        left: 51%;
+        width: 20px;
+        height: 20px;
+        background: url("bullet.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    .rocks{
+        position: absolute;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+        background: url("coin.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #points{
+        position: absolute;
+        top: 0px;
+        margin: 40px;
+        opacity: 0.7;
+        font-size: 10em;
+        color: white;
+
+    }
+
+    .coins{
+        position: absolute;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+        background: url("coin.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    #coin_text{
+        position: absolute;
+        left: 60%;
+        width: 20px;
+        height: 20px;
+        top: 0px;
+        margin: 40px;
+        opacity: 0.7;
+        font-size: 1em;
+        color: red;
+    }
+
+    #coin_count{
+        position: absolute;
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        top: 0px;
+        margin: 40px;
+        opacity: 0.7;
+        font-size: 1em;
+        color: red;
+        
+    }
+
+    .stars{
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation-name: hide;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+        
+    }
+
+    .starimage{
+        height: 80;
+        width: 80;
+        top:100;
+        margin:5px;
+    }
+            
+</style>
+<script src="modifiednewapp.js" defer></script>
+<body>
+    <div id="board">
+        <div id="jet"></div>
+        <div class="coins"></div>
+        <div class="stars"></div>
+    </div>
+    <form>
+        <input autofocus type="text" name="" id="name">
+        <input type="submit">
+    </form>
+    <input type="button" id="clickMe" value="Start">
+    <div id="points">0</div>
+    <div id="coin_text">Coins: </div>
+    <div id="coin_count">0</div>
+    <audio id="audio" src="backgroundsound.mp3"></audio>
+    <audio id="bulletshoot" src="bulletshoot.mp3"></audio>
+    
+</body>
+</html>
+
+
+
