@@ -1,0 +1,76 @@
+body {
+  background-image: url(../image/bg9.jpg);
+  background-size: cover;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --light: #000000;
+  --dark: #000000;
+  gap: 20px;
+}
+h1 {
+  justify-content: center;
+  align-items: center;
+  font-size: 56px;
+  font-weight: 800;
+  color: rgb(245, 12, 249);
+}
+h1 em {
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  color: #edde10;
+}
+.information {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-self: center; */
+  text-align: center;
+}
+
+.job {
+  opacity: 0.75;
+  padding: 12px 0px;
+  color: rgb(255, 255, 255);
+}
+section {
+  width: 60vw;
+  max-width: 800px;
+  /* display: grid; */
+  grid-template-columns: 0.8fr 1fr;
+  background-image: linear-gradient(45deg, var(--light), var(--dark));
+  padding: 32px;
+  border-radius: 64px;
+  color: white;
+}
+.action {
+  padding: 24px 0px;
+}
+
+#main_menu {
+  background-color: rgb(255, 242, 0);
+  cursor: pointer;
+  height: 50px;
+  width: 115px;
+  overflow: hidden;
+  border: 3px solid rgb(7, 243, 82);
+  font-size: large;
+  color: black;
+  font-weight: bold;
+}
+
+#main_menu:hover {
+  background-color: chartreuse;
+  border: 3px solid rgb(236, 11, 60);
+}
