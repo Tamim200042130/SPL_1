@@ -23,8 +23,9 @@ h1 em {
   font-style: normal;
   color: #edde10;
 }
+
 .information {
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   flex-direction: column;

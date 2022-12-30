@@ -164,8 +164,8 @@ window.addEventListener("keydown", (e) => {
                 ){
 
                     star_.parentElement.removeChild(star_);
-                    let myAudio_ = document.querySelector('#destroy')
-                    myAudio_.play()
+                //     let myAudio_1 = document.querySelector('#star')
+                // myAudio_1.play()
                     document.getElementById("points").innerHTML =
                     parseInt(document.getElementById("points").innerHTML) + 1;
                     final_score += 1;

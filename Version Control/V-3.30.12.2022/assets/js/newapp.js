@@ -273,6 +273,8 @@ generatestar();  //Star Generation
                         bulletbound.bottom <= starbound.bottom 
                     ){
                         star_.parentElement.removeChild(star_);
+                        let myAudio = document.querySelector('#star')
+                          myAudio.play()
 
  /************************************************************************************************************************/
                                    //Auto generate star...   New Feature......                        
@@ -282,9 +284,7 @@ generatestar();  //Star Generation
 
 /************************************************************************************************************************/
 
-                        bullet.parentElement.removeChild(bullet);
-                         let myAudio = document.querySelector('#star')
-                          myAudio.play() 
+                        bullet.parentElement.removeChild(bullet); 
                         document.getElementById("points").innerHTML =
                         parseInt(document.getElementById("points").innerHTML) + 2;
                     }                
